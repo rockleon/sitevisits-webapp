@@ -23,7 +23,7 @@
             <v-col cols="8" class="d-flex align-center">
               <div align="center">
                 <v-row class="mx-0 mb-2" justify="center"
-                  >Want to keep count of the nunmber of times your website is
+                  >Want to keep count of the number of times your website is
                   visited?</v-row
                 >
                 <v-row class="mx-0 mb-8" justify="center"

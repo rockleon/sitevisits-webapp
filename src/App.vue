@@ -21,9 +21,10 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 import eventBus from "./plugins/eventBus";
 import VueSmoothScroll from "vue2-smooth-scroll";
+import updateSiteVisit from "@rockleon/site-visits";
 
 Vue.use(VueSmoothScroll, {
   duration: 5000,
@@ -46,6 +47,8 @@ export default {
       this.snackText = data.text;
       this.snackbar = true;
     });
+    const key = "a34c53b4-556c-4853-9856-77cbf3ad1118";
+    updateSiteVisit(key);
   },
 };
 </script>

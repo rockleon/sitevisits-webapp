@@ -4,7 +4,38 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  
+  // {
+  //   path: "/",
+  //   redirect: "/events",
+  //   meta: {
+  //     requiresAuth: false,
+  //   },
+  // },
+  {
+    path: "/",
+    name: "Home",
+    component: () => import("../views/Home.vue"),
+    meta: {
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+    component: () => import("../views/Projects.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  // {
+  //   path: "/events/:eventId",
+  //   name: "EventDetail",
+  //   props: true,
+  //   component: () => import("../views/User/EventDetail.vue"),
+  //   meta: {
+  //     requiresAuth: false,
+  //   },
+  // }
 ];
 
 const router = new VueRouter({
@@ -18,7 +49,7 @@ router.beforeEach((to, from, next) => {
     if (token && token !== "undefined") {
       next();
     } else {
-      next("login");
+      next("/");
     }
   } else {
     next();

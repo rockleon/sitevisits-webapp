@@ -12,13 +12,14 @@ export default new Vuetify({
     },
     themes: {
       light: {
-        primary: "#510BD4",
+        primary: "#004E92",
         secondary: "#8ED40B",
-        background: "#EEEEEE",
+        background: "#FAFAFA",
+        dark: "#141E30",
         // card1: "F5F5F6",
         // card2: "FCFCFC",
         // card3: "FAFAFA",
-        // text: "000000",
+        text: "000000",
         error: "#FD322B",
         info: "#3AA0F3",
         success: "#4ACB41",

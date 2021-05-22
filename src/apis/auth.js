@@ -14,3 +14,11 @@ export function me() {
     method: "get",
   });
 }
+
+export function createUser(payload) {
+  return axios({
+    url: `users/`,
+    method: "post",
+    data: payload,
+  });
+}
